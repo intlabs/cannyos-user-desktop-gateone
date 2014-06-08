@@ -47,11 +47,10 @@ echo ""
 
 #Startup script begins:
 
-#Start Broadway server
-broadwayd&
+#Start ssh server
+/usr/sbin/sshd -D &
 
-#Set GDK backend
-GDK_BACKEND=broadway
+/CannyOS/Desktop/GateOne/run_gateone.py --port=443 --origins=*
 
 echo ""
 echo "*****************************************************"

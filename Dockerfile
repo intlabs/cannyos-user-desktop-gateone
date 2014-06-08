@@ -37,6 +37,7 @@ WORKDIR /
 #Allow remote root login with password
 RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && /etc/init.d/ssh restart
 
+WORKDIR /CannyOS/Desktop
 RUN apt-get install -y python-pip python-dev build-essential && \
 sudo pip install --upgrade pip && \
 sudo pip install tornado && \
@@ -53,8 +54,8 @@ sudo python setup.py install
 #SSH
 #EXPOSE 22/tcp
 
-#HTTP (broadway)
-EXPOSE 8080/tcp
+#HTTPS (gateone)
+EXPOSE 443/tcp
 
 #****************************************************
 #                                                   *
