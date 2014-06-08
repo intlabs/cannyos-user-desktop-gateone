@@ -61,5 +61,5 @@ sudo docker run -i -t --rm \
  --volume "/CannyOS/build/cannyos-user-desktop-gateone":"/CannyOS/Host" \
  --name "cannyos-user-desktop-gateone" \
  --user "root" \
- -p 80:80 -p 222:22 \
+ -p 443:443 -p 222:22 \
  intlabs/cannyos-user-desktop-gateone 
