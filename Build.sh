@@ -60,6 +60,7 @@ sudo docker run -i -t --rm \
  --privileged=true --lxc-conf="native.cgroup.devices.allow = c 10:229 rwm" \
  --volume "/CannyOS/build/cannyos-user-desktop-gateone":"/CannyOS/Host" \
  --name "cannyos-user-desktop-gateone" \
+ --hostname "cannyos-user-desktop-gateone" \
  --user "root" \
  -p 443:443 -p 222:22 \
  intlabs/cannyos-user-desktop-gateone 
