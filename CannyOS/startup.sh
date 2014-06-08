@@ -50,7 +50,7 @@ echo ""
 #Start ssh server
 /usr/sbin/sshd -D &
 
-/CannyOS/Desktop/GateOne/run_gateone.py --port=443 --origins=*
+/CannyOS/Desktop/GateOne/run_gateone.py --port=443 --origins=* &
 
 echo ""
 echo "*****************************************************"
