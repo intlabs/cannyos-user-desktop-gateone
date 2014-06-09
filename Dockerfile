@@ -38,10 +38,17 @@ WORKDIR /
 RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && /etc/init.d/ssh restart
 
 WORKDIR /CannyOS/Desktop
+
+# Install GateOne Dependancies
 RUN apt-get install -y python-pip python-dev build-essential && \
 sudo pip install --upgrade pip && \
-sudo pip install tornado && \
-git clone https://github.com/liftoff/GateOne.git && \
+sudo pip install tornado
+
+# Install GateOne
+# See - https://github.com/liftoff/GateOne/issues/437
+RUN wget https://github.com/liftoff/GateOne/archive/207a9a3edcd098c75caaf24f61a1d80469f1507e.zip && \
+unzip 207a9a3edcd098c75caaf24f61a1d80469f1507e.zip && \
+mv GateOne-* GateOne && \
 cd GateOne/ && \
 sudo python setup.py install
 
