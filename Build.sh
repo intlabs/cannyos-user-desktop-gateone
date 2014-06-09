@@ -62,5 +62,5 @@ sudo docker run -i -t --rm \
  --name "cannyos-user-desktop-gateone" \
  --hostname "cannyos-user-desktop-gateone" \
  --user "root" \
- -p 443:443 -p 222:22 \
+ -p 4443:443 -p 2222:22 \
  intlabs/cannyos-user-desktop-gateone 
