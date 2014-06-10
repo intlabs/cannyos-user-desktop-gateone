@@ -40,7 +40,7 @@ RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ss
 WORKDIR /CannyOS/Desktop
 
 # Install GateOne Dependancies
-RUN apt-get install -y python-pip python-dev build-essential && \
+RUN apt-get install -y python-pip python-dev build-essential dtach && \
 sudo pip install --upgrade pip && \
 sudo pip install tornado
 
