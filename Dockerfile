@@ -46,11 +46,11 @@ sudo pip install tornado
 
 # Install GateOne
 # See - https://github.com/liftoff/GateOne/issues/437
-RUN wget https://github.com/liftoff/GateOne/archive/207a9a3edcd098c75caaf24f61a1d80469f1507e.zip && \
-unzip 207a9a3edcd098c75caaf24f61a1d80469f1507e.zip && \
+RUN wget https://github.com/liftoff/GateOne/archive/master.zip && \
+unzip master.zip && \
 mv GateOne-* GateOne && \
 cd GateOne/ && \
-sudo python setup.py install
+python setup.py install
 
 #****************************************************
 #                                                   *
