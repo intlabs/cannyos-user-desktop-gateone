@@ -19,7 +19,9 @@
 #
 
 # Pull base image.
-FROM intlabs/dockerfile-cannyos-ubuntu-14_04-fuse
+FROM ubuntu:14.04
+
+RUN apt-get install -yqq curl git unzip nano wget sed
 
 # Set environment variables.
 ENV HOME /root
