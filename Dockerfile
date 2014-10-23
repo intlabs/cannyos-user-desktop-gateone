@@ -21,7 +21,7 @@
 # Pull base image.
 FROM ubuntu:14.04
 
-RUN apt-get install -yqq curl git unzip nano wget sed
+RUN apt-get install -y git unzip nano wget sed
 
 # Set environment variables.
 ENV HOME /root
