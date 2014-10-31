@@ -53,6 +53,7 @@ sudo mkdir -p "/CannyOS/build/cannyos-user-desktop-gateone"
 sudo rm -r -f "/CannyOS/build/cannyos-user-desktop-gateone/*"
 
 # Remove any existing containers
+sudo docker rm cannyos-user-desktop-gateone
 sudo docker stop cannyos-user-desktop-gateone
 
 # Launch built base container image

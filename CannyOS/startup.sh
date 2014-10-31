@@ -48,9 +48,9 @@ echo ""
 #Startup script begins:
 
 #Start ssh server
-/usr/sbin/sshd -D &
+#/usr/sbin/sshd -D &
 
-#/CannyOS/Desktop/GateOne/run_gateone.py --port=444 --origins=* &
+/CannyOS/Desktop/GateOne/run_gateone.py --port=443 --origins=* 
 
 echo ""
 echo "*****************************************************"
